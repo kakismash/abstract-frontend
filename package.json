@@ -12,7 +12,7 @@
         "watch": "ng build --watch --configuration development",
         "test": "ng test",
         "preinstall": "npm install -g @angular/cli@14.0.2",
-        "postinstall": "ng build --prod"
+        "postinstall": "ng build"
     },
     "private": true,
     "dependencies": {
