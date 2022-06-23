@@ -11,9 +11,7 @@
         "build": "ng build",
         "watch": "ng build --watch --configuration development",
         "test": "ng test",
-        "heroku-prebuild": "rimraf dist",
         "preinstall": "npm install -g @angular/cli@14.0.2 process",
-        "postinstall": "npm install rimraf -g",
         "heroku-postbuild": "ng build --prod"
     },
     "private": true,
