@@ -11,7 +11,8 @@
         "build": "ng build",
         "watch": "ng build --watch --configuration development",
         "test": "ng test",
-        "preinstall": "npm install -g @angular/cli@14.0.2 process",
+        "preinstall": "npm install -g @angular/cli@14.0.2",
+        "postinstall": "npm install process",
         "heroku-postbuild": "ng build"
     },
     "private": true,
