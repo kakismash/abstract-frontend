@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+body {
+    height: fit-content;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-image: url("./assets/OIP.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.session-state {
+    float: right;
+    margin-right: 24px;
+    position: relative;
+}

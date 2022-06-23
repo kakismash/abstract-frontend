@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>{{formType === 1 ? 'Add Article' : 'Edit Article'}}</h2>
+<mat-dialog-content class="mat-typography">
+    <form class="container" [formGroup]="formArticle" (ngSubmit)="submit()">
+        <mat-form-field appearance="legacy" *ngIf="formType === 1">
+            <mat-label>ID</mat-label>
+            <input matInput type="text" placeholder="ID" formControlName="id" required>
+            <mat-error *ngIf="idControl?.value === '' && idControl?.touched">Please enter an ID</mat-error>
+        </mat-form-field>
+
+        <div class="div-pos" *ngIf="formType === 2">
+            <mat-label *ngIf="formType === 2">ID: {{article.id}}</mat-label>
+        </div>
+        <mat-form-field appearance="legacy">
+            <mat-label>Type</mat-label>
+            <mat-select matNativeControl required formControlName="type" [(ngModel)]="article.type">
+                <mat-option value="pubmed">Pubmed</mat-option>
+                <mat-option value="omim">Omim</mat-option>
+                <mat-option value="hgmd">Hgmd</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+    </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close (click)="cancel()">Cancel</button>
+
+    <button mat-button mat-dialog-close (click)="submit()" type="submit" cdkFocusInitial>Save</button>
+
+</mat-dialog-actions>
