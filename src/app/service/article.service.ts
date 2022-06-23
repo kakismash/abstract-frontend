@@ -10,7 +10,8 @@ import { SessionService } from './session.service';
 })
 export class ArticleService {
 
-  path: string = environment.URL_API  + 'article';
+  URL_PATH: string = process && process.env && process.env["URL_API"] ? process.env["URL_API"] : 'http://localhost:3000/';
+  path: string = this.URL_PATH  + 'article';
 
   constructor(private readonly http: HttpClient, private readonly sessionService: SessionService) { }
 
