@@ -8,7 +8,6 @@ import { SessionService } from './session.service';
 })
 export class ArticleService {
 
-  // URL_PATH: string = env && env["URL_API"] ? env["URL_API"] : 'http://localhost:3000/';
   URL_PATH: string = 'https://abstract-backend-project.herokuapp.com/';
   path: string = this.URL_PATH  + 'article';
 
