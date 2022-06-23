@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { env } from 'process';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Article } from '../model/article.model';
@@ -10,7 +11,7 @@ import { SessionService } from './session.service';
 })
 export class ArticleService {
 
-  URL_PATH: string = process && process.env && process.env["URL_API"] ? process.env["URL_API"] : 'http://localhost:3000/';
+  URL_PATH: string = env && env["URL_API"] ? env["URL_API"] : 'http://localhost:3000/';
   path: string = this.URL_PATH  + 'article';
 
   constructor(private readonly http: HttpClient, private readonly sessionService: SessionService) { }
